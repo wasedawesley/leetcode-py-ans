@@ -12,3 +12,9 @@ class Solution(object):
         stack.pop()
         stack.pop()
     return len(stack) == 0
+  def my (self, s):
+    stack = []
+    d = ["[]", "{}", "()"]
+    for i in range(0, len(s)):
+      stack.append(s[i])
+      if len(stack>=2) and 

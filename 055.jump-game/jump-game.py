@@ -20,3 +20,14 @@ class Solution(object):
           posToFarthest = i
       pos = posToFarthest
     return True if pos >= len(nums) - 1 else False
+  
+  def mycam(self, nums):
+    reach = 0
+    for i, num in enumerate(nums):
+      if i > reach:
+        return False
+      reach =  max(reach, i + num)
+    return True
+
+so = Solution()
+print (so.mycam([2,3,1,1,4]))

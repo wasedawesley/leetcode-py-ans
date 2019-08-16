@@ -17,3 +17,12 @@ class Solution(object):
       else:
         ans.append(intv)
     return ans
+  
+  def my (self, inters):
+    res = []
+    for inter in sorted(inters, key = lambda x : x.start):
+      if res and res[-1][-1] > inter[0]:
+        res[-1][-1] = max(res[-1][-1], inter[-1])
+      else:
+        res.append(inter)
+    return res

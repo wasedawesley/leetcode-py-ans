@@ -25,3 +25,5 @@ class Solution(object):
       d[c] = i
       ans = max(ans, i - start + 1)
     return ans
+s= Solution()
+print (s.lengthOfLongestSubstring('abcdef'))

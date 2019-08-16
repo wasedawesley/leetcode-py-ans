@@ -13,6 +13,7 @@ class Solution(object):
         return
 
       for i in range(0, len(nums)):
+        print ('visited' ,visited)
         # if i > 0 and nums[i - 1] == nums[i]:
         #     continue
         if i not in visited:
@@ -24,3 +25,6 @@ class Solution(object):
 
     dfs(nums, [], res, visited)
     return res
+
+s = Solution()
+print (s.permute([1,2,3]))

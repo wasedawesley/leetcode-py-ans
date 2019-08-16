@@ -28,3 +28,22 @@ class Solution(object):
         node = node.next
         heapq.heappush(heap, (node.val, node))
     return dummy.next
+  
+  def mergeKLists(self, lists):
+    heap = [] 
+    for node in lists:
+      while node:
+        heapq.heappush(heap, node.val)
+        node = node.next
+    p = temp = Listnode(-1)
+    while heap:
+      value = heapq.heappop(heap)
+      p.next = ListNode(value)
+      p = p.next
+    return temp.next
+  def mergeKLists(self, lists):
+    if not lists:
+      return
+    if len(lists)==1:
+      return lists[0]
+    mid = 
